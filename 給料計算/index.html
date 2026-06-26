@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>給与計算</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="給与計算">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>💰 給与計算</h1>
+  <div id="salaryTotal">¥0</div>
+</header>
+
+<div class="card">
+  <h3>⚙️ 設定</h3>
+
+  <label>月給</label>
+  <input id="monthlySalary" type="number">
+
+  <label>所定労働時間</label>
+  <input id="monthlyHours" type="number">
+
+  <button id="saveSettings">
+    設定保存
+  </button>
+</div>
+
+<section class="calendar-section">
+  <div class="month-header">
+    <button id="prevMonth">◀</button>
+    <h2 id="monthTitle"></h2>
+    <button id="nextMonth">▶</button>
+  </div>
+  <div id="calendar"></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
