@@ -1,0 +1,95 @@
+body{
+  margin:0;
+  padding:20px;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#0f172a;
+  color:white;
+}
+
+header{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+#salaryTotal{
+  margin-top:10px;
+}
+
+.card{
+  background:#1e293b;
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 4px 20px rgba(0,0,0,.2);
+}
+
+.month-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.month-header button{
+  width:50px;
+  height:50px;
+  border:none;
+  border-radius:50%;
+  background:#2563eb;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
+#calendar{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:8px;
+}
+
+.day{
+  background:#1e293b;
+  border-radius:16px;
+  min-height:80px;
+  padding:8px;
+  border:1px solid #334155;
+  transition:.2s;
+}
+
+.day:hover{
+  transform:translateY(-3px);
+}
+
+input{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:#334155;
+  color:white;
+  margin-bottom:15px;
+  box-sizing:border-box;
+}
+
+button{
+  border:none;
+  border-radius:12px;
+  padding:12px;
+  cursor:pointer;
+}
+
+.today{
+  border:2px solid #22c55e;
+  box-shadow:0 0 15px rgba(34,197,94,.6);
+}
+
+.sunday{
+  color:#ef4444;
+}
+
+.saturday{
+  color:#60a5fa;
+}
