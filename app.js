@@ -181,16 +181,14 @@ function updateTotal() {
     ${overtimeHours}h
   </div>
 
+ <div>
+    休日出勤
+    ${holidayHours}h
+  </div>
+
   <div>
     残業代
     ¥${Math.round(overtimePay).toLocaleString()}
-  </div>
-
-  <br>
-
-  <div>
-    休日出勤
-    ${holidayHours}h
   </div>
 
   <div>
