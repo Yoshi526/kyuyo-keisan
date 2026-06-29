@@ -136,6 +136,7 @@ function updateTotal() {
   let holidayPay = 0;
   let overtimeHours = 0;
   let holidayHours = 0;
+  let overtimeBasePay = 0;
 
   Object.values(workData).forEach(item => {
 
@@ -183,16 +184,6 @@ function updateTotal() {
     ¥${Math.round(total).toLocaleString()}
   </div>
 
-  <div>
-    基本給
-    ¥${Math.round(monthlySalary).toLocaleString()}
-  </div>
-
-  <div>
-    時給
-    ¥${Math.round(hourlyPay).toLocaleString()}
-  </div>
-
   <hr>
 
   <div>
@@ -200,9 +191,16 @@ function updateTotal() {
     ${overtimeHours}h
   </div>
 
- <div>
+  <div>
     休日出勤
     ${holidayHours}h
+  </div>
+
+  <hr>
+
+  <div>
+    基本給
+    ¥${Math.round(monthlySalary).toLocaleString()}
   </div>
 
   <div>
@@ -221,13 +219,20 @@ function updateTotal() {
   </div>
 
   <div>
-    時間外基礎額
-    ¥${Math.round(overtimeBase).toLocaleString()}
+    その他手当
+    ¥${Math.round(otherAllowance).toLocaleString()}
+  </div>
+
+  <hr>
+
+  <div>
+    時給
+    ¥${Math.round(hourlyPay).toLocaleString()}
   </div>
 
   <div>
-    その他手当
-    ¥${Math.round(otherAllowance).toLocaleString()}
+    時間外基礎額
+    ¥${Math.round(overtimeBase).toLocaleString()}
   </div>
 
 `;
