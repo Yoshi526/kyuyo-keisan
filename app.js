@@ -16,6 +16,8 @@ const holidayRateInput =
   document.getElementById("holidayRate");
 const commuteInput = 
   document.getElementById("commuteAllowance");
+const overtimeBaseInput = 
+  document.getElementById("overtimeBase");
 const otherInput = 
   document.getElementById("otherAllowance");
 
@@ -34,8 +36,11 @@ let overtimeRate =
 let holidayRate =
   Number(localStorage.getItem("holidayRate")) || 1.4;
 
-let commuteAllowance =
+  let commuteAllowance =
   Number(localStorage.getItem("commuteAllowance")) || 0;
+
+let overtimeBase =
+  Number(localStorage.getItem("overtimeBase")) || 0;
 
 let otherAllowance =
   Number(localStorage.getItem("otherAllowance")) || 0;
@@ -46,6 +51,7 @@ hoursInput.value = monthlyHours;
 overtimeRateInput.value = overtimeRate;
 holidayRateInput.value = holidayRate;
 commuteInput.value = commuteAllowance;
+overtimeBaseInput.value = overtimeBase;
 otherInput.value = otherAllowance;
 
 // 保存
@@ -95,6 +101,11 @@ saveButton.addEventListener("click", () => {
   );
 
   localStorage.setItem(
+    "overtimeBase",
+    overtimeBase
+  );
+
+  localStorage.setItem(
     "otherAllowance", 
     otherAllowance
   );
@@ -111,7 +122,7 @@ let workData = {};
 function updateTotal() {
 
   const baseHourly =
-    monthlySalary / monthlyHours;
+    (monthlySalary + overtimeBase) / monthlyHours;
 
   let overtimePay = 0;
   let holidayPay = 0;
@@ -199,6 +210,11 @@ function updateTotal() {
     <div>
     通勤手当
     ¥${Math.round(commuteAllowance).toLocaleString()}
+  </div>
+
+  <div>
+    時間外基礎額
+    ¥${Math.round(overtimeBase).toLocaleString()}
   </div>
 
   <div>
