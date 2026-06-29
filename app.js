@@ -184,19 +184,7 @@ function updateTotal() {
     ¥${Math.round(total).toLocaleString()}
   </div>
 
-  <hr>
-
-  <div>
-    残業
-    ${overtimeHours}h
-  </div>
-
-  <div>
-    休日出勤
-    ${holidayHours}h
-  </div>
-
-  <hr>
+<hr>
 
   <div>
     基本給
@@ -221,6 +209,18 @@ function updateTotal() {
   <div>
     その他手当
     ¥${Math.round(otherAllowance).toLocaleString()}
+  </div>
+
+  <hr>
+
+  <div>
+    残業
+    ${overtimeHours}h
+  </div>
+
+  <div>
+    休日出勤
+    ${holidayHours}h
   </div>
 
   <hr>
