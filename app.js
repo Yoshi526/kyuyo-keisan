@@ -12,14 +12,19 @@ const saveButton =
 
 const overtimeRateInput = 
   document.getElementById("overtimeRate");
+
 const holidayRateInput = 
   document.getElementById("holidayRate");
+
 const commuteInput = 
   document.getElementById("commuteAllowance");
+
 const overtimeBaseInput = 
   document.getElementById("overtimeBase");
+
 const otherInput = 
   document.getElementById("otherAllowance");
+
 
 // 保存済み設定
 let monthlySalary =
@@ -71,6 +76,9 @@ saveButton.addEventListener("click", () => {
 
   commuteAllowance = 
     Number(commuteInput.value);
+
+  overtimeBase = 
+    Number(overtimeBaseInput.value);
 
   otherAllowance = 
     Number(otherInput.value);
