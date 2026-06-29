@@ -211,7 +211,7 @@ function updateTotal() {
     ¥${Math.round(otherAllowance).toLocaleString()}
   </div>
 
-  <hr>
+<hr>
 
   <div>
     残業
@@ -223,7 +223,7 @@ function updateTotal() {
     ${holidayHours}h
   </div>
 
-  <hr>
+<hr>
 
   <div>
     時給
